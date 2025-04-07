@@ -1,0 +1,18 @@
+def mult_mat(A, B):
+    if len(A[0]) != len(B):
+        raise ValueError("EL NUMERO DE COLUMNAS A SEA IGUAL A NUMEROS DE FILAS DE B")
+
+    resultado = []
+    for i in range(len(A)):
+        fila = []
+        for j in range(len(B[0])):
+            suma = 0
+            for k in range(len(B)):
+                suma += A[i][k] * B[k][j]
+            fila.append(suma)
+        resultado.append(fila)
+    return resultado
+A = [[1, 2], [3, 4]]
+B = [[5, 6], [7, 8]]
+print("******LA MULTIPLICACION DE MATRICES******")
+print(mult_mat(A, B))
