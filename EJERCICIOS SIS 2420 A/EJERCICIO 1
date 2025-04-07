@@ -1,0 +1,19 @@
+entrada = input("Ingrese una lista de números separados por comas: ")
+num = [int(n.strip()) for n in entrada.split(",")]
+
+sum_tot = sum(num)
+mayor = max(num)
+menor = min(num)
+pares = sum(1 for n in num if n % 2 == 0)
+impares = len(num) - pares
+
+print("****SUMA TOTAL****")
+print("La Suma Total Es", sum_tot)
+print("****EL NUMERO MAYOR****")
+print("El", mayor, "Es Mayor")
+print("****EL NUMERO MENOR****")
+print("El", menor, "Es Menor ")
+print("****LA CANTIDAD DE NUMEROS PARES****")
+print(pares, "Numeros Son Pares")
+print("****LA CANTIDAD DE NUMEROS IMPARES****")
+print(impares, "Numeros Son Impares")
